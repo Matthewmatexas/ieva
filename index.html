@@ -137,7 +137,7 @@
     </div>
     <div id="right">
         <p style="font-size: 30px;">Teisingai <i class="fa-regular fa-face-smile" style="color: orange;"></i></p>
-        <p style="font-size: 17px; margin-top: 10px;">Keliau toliau! <br> Kitą QR kodą rasi virtuvėje <i class="fa-solid fa-ellipsis" id="info" onclick="showLocation()"></i><span style="display: none; opacity: 0;" id="location">po stalu.</span></p>
+        <p style="font-size: 17px; margin-top: 10px;">Keliau toliau! <br> Kitą QR kodą rasi virtuvėje <i class="fa-solid fa-ellipsis" id="info" onclick="showLocation()"></i><span style="display: none; opacity: 0;" id="location" onclick="hideLocation()">po stalu.</span></p>
     </div>
     <p style="text-align: center; font-size: 20px; margin-top: 50px;">Pasirink morką:</p>
     <img src="img1.jpeg" alt="Pupulis" style="width: 200px; position: fixed; top: 140px; border-radius: 25px; left: -130%; animation: pupulis 24s linear infinite;">
@@ -423,6 +423,16 @@
         }, 300);
         setTimeout(() => {  
             document.getElementById("location").style.opacity = "1";
+        }, 350);
+    }
+    function hideLocation() {
+        document.getElementById("location").style.opacity = "0";
+        setTimeout(() => {  
+            document.getElementById("location").style.display = "none";
+            document.getElementById("info").style.display = "inline";
+        }, 300);
+        setTimeout(() => {  
+            document.getElementById("info").style.opacity = "1";
         }, 350);
     }
 </script>
