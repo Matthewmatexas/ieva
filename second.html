@@ -136,9 +136,6 @@
 
     <div id="screen">
         <i class="fa-solid fa-carrot" style="animation: size 2s linear infinite; opacity: 0;" id="carrotLoad"></i>
-        <p style="font-size: 20px; color: black; position: absolute; opacity: 0; margin-top: -100px;" id="suGimtadieniu">Su gimtadieniu!</p>
-        <p style="font-size: 20px; color: black; position: absolute; opacity: 0; margin-top: -100px;" id="atlikUzduotis">Atlik užduotis ir atsiimk savo dovaną!</p>
-        <i class="fa-solid fa-cake-candles" style="color: pink; position: absolute; opacity: 0;" id="cake"></i>
     </div>
     <div id="linear"></div>
     <div id="wrong">
@@ -149,9 +146,9 @@
     </div>
     <div id="right">
         <p style="font-size: 30px;">Teisingai <i class="fa-regular fa-face-smile" style="color: orange;"></i></p>
-        <p style="font-size: 17px; margin-top: 10px;">Keliau toliau! <br> Kitą QR kodą rasi virtuvėje <i class="fa-solid fa-ellipsis" id="info" onclick="showLocation()"></i><span style="display: none; opacity: 0;" id="location" onclick="hideLocation()">po stalu.</span></p>
+        <p style="font-size: 17px; margin-top: 10px;">Keliau toliau! <br> Kitą QR kodą rasi antrame aukšte <i class="fa-solid fa-ellipsis" id="info" onclick="showLocation()"></i><span style="display: none; opacity: 0;" id="location" onclick="hideLocation()">po laiptais.</span></p>
     </div>
-    <p style="text-align: center; font-size: 20px; background-color: white; border-radius: 25px; width: 180px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; margin: 0 auto; margin-top: 40px;">Pasirink morką:</p>
+    <p style="text-align: center; font-size: 20px; background-color: white; border-radius: 25px; width: 220px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; margin: 0 auto; margin-top: 40px;">Kiek Pupuliui metų?</p>
     <img src="img1.jpeg" alt="Pupulis" style="width: 200px; position: fixed; z-index: -1; top: 140px; border-radius: 25px; left: -130%; animation: pupulis 24s linear infinite;">
     <img src="img2.jpeg" alt="Pupulis" style="width: 200px; position: fixed; z-index: -1; top: 140px; border-radius: 25px; right: -130%; animation: pupulis2 24s linear infinite 2s;">
     <img src="img3.jpeg" alt="Pupulis" style="width: 200px; position: fixed; z-index: -1; top: 140px; border-radius: 25px; left: -130%; animation: pupulis 24s linear infinite 4s;">
@@ -165,11 +162,11 @@
     <img src="img11.jpeg" alt="Pupulis" style="width: 200px; position: fixed; z-index: -1; top: 140px; border-radius: 25px; left: -130%; animation: pupulis 24s linear infinite 20s;">
     <img src="img12.jpeg" alt="Pupulis" style="width: 200px; position: fixed; z-index: -1; top: 140px; border-radius: 25px; right: -130%; animation: pupulis2 24s linear infinite 22s;">
     <div id="carrot">
-        <i class="fa-solid fa-carrot" style="transform: rotate(-45deg); position: absolute; margin-left: -300px;" id="carrot1" onclick="carrotOne()"></i>
-        <i class="fa-solid fa-carrot" style="transform: rotate(-45deg); position: absolute; margin-left: -150px;" id="carrot2" onclick="carrotTwo()"></i>
-        <i class="fa-solid fa-carrot" style="transform: rotate(-45deg); position: absolute;" id="carrot3" onclick="carrotThree()"></i>
-        <i class="fa-solid fa-carrot" style="transform: rotate(-45deg); position: absolute; margin-left: 150px;" id="carrot4" onclick="carrotFour()"></i>
-        <i class="fa-solid fa-carrot" style="transform: rotate(-45deg); position: absolute; margin-left: 300px;" id="carrot5" onclick="carrotFive()"></i>
+        <i class="fa-solid fa-1" style="transform: rotate(45deg); position: absolute; margin-left: -300px;" id="carrot1" onclick="carrotOne()"></i>
+        <i class="fa-solid fa-4" style="transform: rotate(45deg); position: absolute; margin-left: -150px;" id="carrot4" onclick="carrotFour()"></i>
+        <i class="fa-solid fa-5" style="transform: rotate(45deg); position: absolute;" id="carrot3" onclick="carrotThree()"></i>
+        <i class="fa-solid fa-3" style="transform: rotate(45deg); position: absolute; margin-left: 150px;" id="carrot2" onclick="carrotTwo()"></i>
+        <i class="fa-solid fa-2" style="transform: rotate(45deg); position: absolute; margin-left: 300px;" id="carrot5" onclick="carrotFive()"></i>
     </div>
 
 <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
@@ -179,44 +176,17 @@
     }, 1000);
     function loadFunction() {
         setTimeout(() => {  
-            document.getElementById("carrotLoad").style.opacity = "0";
+            document.getElementById("screen").style.opacity = "0";
         }, 3000);
         setTimeout(() => {  
-            document.getElementById("cake").style.opacity = "0.5";
+            document.getElementById("screen").style.display = "none";
+        }, 3300);
+        setTimeout(() => {  
+            document.getElementById("linear").style.opacity = "1";
         }, 4000);
         setTimeout(() => {  
-            document.getElementById("cake").style.marginTop = "100px";
-        }, 4500);
-        setTimeout(() => {  
-            document.getElementById("suGimtadieniu").style.opacity = "1";
-        }, 5000);
-        setTimeout(() => {  
-            document.getElementById("suGimtadieniu").style.opacity = "0";
-        }, 8000);
-        setTimeout(() => {  
-            document.getElementById("atlikUzduotis").style.opacity = "1";
-        }, 8500);
-        setTimeout(() => {  
-            document.getElementById("atlikUzduotis").style.opacity = "0";
-        }, 12000);
-        setTimeout(() => {  
-            document.getElementById("cake").style.marginTop = "0";
-        }, 12500);
-        setTimeout(() => {  
-            document.getElementById("cake").style.opacity = "0";
-        }, 13000);
-        setTimeout(() => {  
-            document.getElementById("screen").style.opacity = "0";
-        }, 14000);
-        setTimeout(() => {  
-            document.getElementById("screen").style.display = "none";
-        }, 14300);
-        setTimeout(() => {
-            document.getElementById("linear").style.opacity = "1";
-        }, 15000);
-        setTimeout(() => {  
             document.getElementById("linear").style.opacity = "0";
-        }, 15300);
+        }, 4300);
     }
     function carrotOne() {
         document.getElementById("carrot1").style.marginTop = "-100px";
@@ -253,7 +223,7 @@
             document.getElementById("wrong").style.opacity = "0";
             document.getElementById("timeBar").style.borderRadius = "0";
             document.getElementById("carrot1").style.marginTop = "0";
-            document.getElementById("carrot1").style.transform = "rotate(-45deg)";
+            document.getElementById("carrot1").style.transform = "rotate(45deg)";
         }, 62000);
         setTimeout(() => {  
             document.getElementById("wrong").style.display = "none";
@@ -303,7 +273,7 @@
             document.getElementById("wrong").style.opacity = "0";
             document.getElementById("timeBar").style.borderRadius = "0";
             document.getElementById("carrot2").style.marginTop = "0";
-            document.getElementById("carrot2").style.transform = "rotate(-45deg)";
+            document.getElementById("carrot2").style.transform = "rotate(45deg)";
         }, 62000);
         setTimeout(() => {  
             document.getElementById("wrong").style.display = "none";
@@ -353,7 +323,7 @@
             document.getElementById("wrong").style.opacity = "0";
             document.getElementById("timeBar").style.borderRadius = "0";
             document.getElementById("carrot3").style.marginTop = "0";
-            document.getElementById("carrot3").style.transform = "rotate(-45deg)";
+            document.getElementById("carrot3").style.transform = "rotate(45deg)";
         }, 62000);
         setTimeout(() => {  
             document.getElementById("wrong").style.display = "none";
@@ -418,7 +388,7 @@
             document.getElementById("wrong").style.opacity = "0";
             document.getElementById("timeBar").style.borderRadius = "0";
             document.getElementById("carrot5").style.marginTop = "0";
-            document.getElementById("carrot5").style.transform = "rotate(-45deg)";
+            document.getElementById("carrot5").style.transform = "rotate(45deg)";
         }, 62000);
         setTimeout(() => {  
             document.getElementById("wrong").style.display = "none";
